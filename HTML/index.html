@@ -18,9 +18,9 @@
 						<img class = "logo" src="../images/logo.png"/>
 
 						<nav>
-							<a class = "navbar" href="index.html">Home</a>
-							<a class = "navbar" href="portfolio.html">Portfolio</a>
-							<a class = "navbar" href="Testimonials.html">Testimonials</a>
+							<a class = "navbar" href="index.html">About</a>
+							<a class = "navbar" href="portfolio.html">Work</a>
+							<a class = "navbar" href="Testimonials.html">Notes</a>
 						</nav>
 					</div>
 				</div>
@@ -76,6 +76,23 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+
+//CHANGE NAVBAR COLOR
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#head');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+      	  $('.header').css("background-image", "none");
+          $('.header').css('background-color', 'black');
+       } else {
+         $('.header').css("background-image", "url(../images/101.jpg)");
+
+       }
+   });
+});
 
 /////////
 

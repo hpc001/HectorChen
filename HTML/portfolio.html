@@ -14,25 +14,25 @@
 <body>
 
 	<div class="header">
+
 		<div class = "center">
 			<div class = "nav-down">
 				<img class = "logo" src="../images/logo.png"/>
 
 				<nav>
-					<a class = "navbar" href="index.html">Home</a>
-					<a class = "navbar" href="portfolio.html">Portfolio</a>
-					<a class = "navbar" href="Testimonials.html">Testimonials</a>
+					<a class = "navbar" href="index.html">About</a>
+					<a class = "navbar" href="portfolio.html">Work</a>
+					<a class = "navbar" href="testimonials.html">Notes</a>
 				</nav>
 			</div>
-			</div>
-
+		</div>
 
 	</div>
 
 	<div id = "head">
 		<div class = "top">
 			<span>
-				<h1 class = "portfolio">Portfolio</h1>
+				<h1 class = "portfolio">Work</h1>
 			</span>
 			</div>
 	</div>
@@ -61,6 +61,7 @@
 
 	<footer>
 		<div id = "foot">
+
 			<div class = "social">
 				<h3 class = "smtext"> Social Media</h3>
 				<a href = "https://facebook.com/hector.chen"> <img class = "sm" src="../images/socialmediabadge/facebook.png"></a>				
@@ -76,12 +77,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <script>
 ////// Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('header').outerHeight();
+var navbarHeight = $('.header').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -106,15 +108,34 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('.header').removeClass('nav-down').addClass('nav-up');
+
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('.header').removeClass('nav-up').addClass('nav-down');
+
         }
     }
     
     lastScrollTop = st;
 }
+
+//CHANGE NAVBAR COLOR
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#head');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+      	  $('.header').css("background-image", "none");
+          $('.header').css('background-color', 'black');
+       } else {
+         $('.header').css("background-image", "url(../images/101.jpg)");
+
+       }
+   });
+});
 
 /////////
 
