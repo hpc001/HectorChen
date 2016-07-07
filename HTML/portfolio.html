@@ -5,13 +5,17 @@
 		<meta name = "viewport" content = "width = device-width, initial-scale=1">
 		<meta charset = "uft-8">
 		<link rel = "shortcut_icon" href = "..." >
+
 		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>		
 		<link rel = "stylesheet" href = "../CSS/style.css" >
 	</head>
 
+
 <body>
-	<div id="head">
-			<div class = "header">
+
+	<div class="header">
+		<div class = "center">
+			<div class = "nav-down">
 				<img class = "logo" src="../images/logo.png"/>
 
 				<nav>
@@ -20,11 +24,17 @@
 					<a class = "navbar" href="Testimonials.html">Testimonials</a>
 				</nav>
 			</div>
+			</div>
+
+
+	</div>
+
+	<div id = "head">
+		<div class = "top">
 			<span>
 				<h1 class = "portfolio">Portfolio</h1>
 			</span>
-
-
+			</div>
 	</div>
 
 	<div id="container">
@@ -52,11 +62,64 @@
 	<footer>
 		<div id = "foot">
 			<div class = "social">
+				<h3 class = "smtext"> Social Media</h3>
+				<a href = "https://facebook.com/hector.chen"> <img class = "sm" src="../images/socialmediabadge/facebook.png"></a>				
+				<a href = "https://www.linkedin.com/in/hector-chen-bba446b5"> <img class = "sm" src="../images/socialmediabadge/linkedin.png"></a>
+
 
 			</div>
 		</div>
 
 	</footer>
 
+	<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+////// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('.header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('.header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+/////////
+
+</script>
+
 </body>
 </html>
+
