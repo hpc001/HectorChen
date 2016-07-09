@@ -33,21 +33,26 @@
 
 	</div>
 
+	<div class = "abovemain">
+		<span>
+					<h1 class = "title">I'm Hector</h1>
+		</span>			
+	</div>
+
 	<div class = "main">
 		<div id = "container">
-			
-			<span>
-				<h1 class = "title">I'm Hector</h1>
-			</span>			
-			<span>
-				<h2 class = "slogan">Death Before Defeat</h2>
-			</span>
+			<a id = box-link href="notes.html"></a>
+
 		</div>
 	</div>
 	
 
 	<div class = "about">
 	</div>
+
+			<div class = "email">
+				<a href="mailto:hectorchen6@gmail.com" target="_top"><img src="../images/messageicon.jpg"></a>				
+			</div>
 
 	</div>
 
@@ -65,13 +70,11 @@
 
 
 
+
 			<p class = "copyright">© 2016 <a id = "cr" href="http://hectorchen.com">Hector Chen</a>. All rights reserved.</p>
 
 		</div>
 		
-
-
-
 
 	</footer>
 
@@ -121,7 +124,7 @@ function hasScrolled() {
 //CHANGE NAVBAR COLOR
 $(document).ready(function(){       
    var scroll_start = 0;
-   var startchange = $('.main');
+   var startchange = $('.abovemain');
    var offset = startchange.offset();
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
