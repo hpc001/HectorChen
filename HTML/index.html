@@ -4,7 +4,11 @@
 		<title> Hector Chen </title>
 		<meta name = "viewport" content = "width = device-width, initial-scale=1">
 		<meta charset = "uft-8">
-		<link rel = "shortcut_icon" href = "..." >
+		<link rel = "shortcut_icon" href = "../images/favicons/favicon.ico" >
+
+
+
+
 		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>		
     	<link rel="stylesheet" type = 'text/css' href = "../bootstrap-hc/css/bootstrap.css" >
 
@@ -17,7 +21,7 @@
 	<div class="header">
 		<div class = "center">
 			<div class = "nav-down">
-				<img class = "logo" src="../images/logo.png"/>
+				<a href="index.html"><img class = "logo" src="../images/huskylogo.png"/></a>
 
 				<nav>
 					<a class = "navlinks" href="index.html">About</a>
@@ -40,7 +44,38 @@
 			</span>
 		</div>
 	</div>
+	
+
+	<div class = "about">
 	</div>
+
+	</div>
+
+	<footer>
+
+
+		<div id = "foot">
+
+			<div class = "social">
+				<a href = "https://facebook.com/hector.chen"> <img class = "sm" src="../images/socialmediabadge/facebook.png"></a>				
+				<a href = "https://www.linkedin.com/in/hector-chen-bba446b5"> <img class = "sm" src="../images/socialmediabadge/linkedin.png"></a>
+				<a href = "https://github.com/hpc001"> <img class = "sm" src="../images/socialmediabadge/github.png"></a>				
+
+			</div>
+
+
+
+			<p class = "copyright">© 2016 <a id = "cr" href="http://hectorchen.com">Hector Chen</a>. All rights reserved.</p>
+
+		</div>
+		
+
+
+
+
+	</footer>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
@@ -86,15 +121,30 @@ function hasScrolled() {
 //CHANGE NAVBAR COLOR
 $(document).ready(function(){       
    var scroll_start = 0;
-   var startchange = $('#head');
+   var startchange = $('.main');
    var offset = startchange.offset();
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
       if(scroll_start > offset.top) {
-      	  $('.header').css("background-image", "none");
-          $('.header').css('background-color', 'black');
+      	    	//$('.header').css("background-image", "none");
+	          	$('.header').css('background-color', 'white');
+	          	$('.navlinks').css('color', '#4B77BE');
+	          	//$('.header').fadeIn('slow');
+	          	//$('.header').css('border-bottom', 'ridge 1px grey');
+	          	$('.header').css('box-shadow', '0px 7px 2px -6px #777');
+
+
        } else {
-         $('.header').css("background-image", "url(../images/101.jpg)");
+       	  	$('.header').fadeIn('slow', function () {
+		         $('.header').css('background-color', '#4B77BE');
+		         //$('.header').css("background-image", "url(../images/101.jpg)");
+		         //$('.header').fadeIn('slow');
+	          		$('.navlinks').css('color', '#FFF');
+
+
+		          //$('.header').css('border-bottom', 'none');
+		          $('.header').css('box-shadow', 'none');
+      		});
 
        }
    });
