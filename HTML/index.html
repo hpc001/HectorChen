@@ -33,7 +33,6 @@
 
 		<div class = "main">
 			<div id = "container">
-				<a id = box-link href="notes.html"></a>
 			</div>
 		</div>
 		
@@ -49,6 +48,24 @@
 				recently Big Data. 
 			</p>
 
+		</section>
+
+		<section id = "summary">
+				<div id = "cf">
+						<img class = "iphonehexblue" src="../images/iphonehexblue.png" height = "235" width = "181">
+						<img class = "iphone" src="../images/iphonebadge.png" height = "235" width = "181">
+
+				</div>
+				<img class = "pencil shift" src="../images/pencilbadge.png" height = "235" width = "181" >
+				<img class = "website shift" src="../images/macbadge.png" height = "235" width = "181">
+<!--
+
+				<a id = box-link href="notes.html"></a>
+
+				<p class = "img-description"> THIS IS A TEST DESCRIPTION. <br>
+											  I HOPE THIS WORKS CUZ IT WOULD <br>
+											  BE SO TOTALLY AWESOME YAY!</p> 
+-->
 		</section>
 
 		<section id = "contactme">
@@ -139,6 +156,8 @@ $(document).ready(function(){
       if(scroll_start > offset.top) {
       	    	//$('.header').css("background-image", "none");
 	          	$('.header').css('background-color', 'white');
+		         $('.header').css('transition', 'top 0.4s ease-in-out');
+
 	          	$('.navlinks').css('color', '#4B77BE');
 	          	//$('.header').fadeIn('slow');
 	          	//$('.header').css('border-bottom', 'ridge 1px grey');
@@ -148,6 +167,8 @@ $(document).ready(function(){
        } else {
        	  	$('.header').fadeIn('slow', function () {
 		         $('.header').css('background-color', '#4B77BE');
+		         $('.header').css('transition', 'background-color 0.5s ease, top 0.4s ease-in-out');
+
 		         //$('.header').css("background-image", "url(../images/101.jpg)");
 		         //$('.header').fadeIn('slow');
 	          		$('.navlinks').css('color', '#FFF');
@@ -162,6 +183,9 @@ $(document).ready(function(){
 });
 
 /////////
+
+
+
 
 </script>
 
