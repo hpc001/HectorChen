@@ -20,6 +20,13 @@ body {
  
 }
 
+.abovemain{
+	padding-top: 100px;
+	height: 250px;
+	background-color: #4B77BE;
+	overflow: hidden;
+}
+
 /*secret box link!!!*/
 #box-link { 
 		position: absolute; 
@@ -30,14 +37,6 @@ body {
 		background-color: transparent; 
 }
 
-.abovemain{
-	padding-top: 100px;
-	height: 250px;
-	background-color: #4B77BE;
-	overflow: hidden;
-}
-
-
 .main{
  	width: 100%;
  	height: 100%;
@@ -45,7 +44,6 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center; 
-	position: relative;
 
 }
 
@@ -68,9 +66,22 @@ body {
 }
 
 
-.about{
+#about{
+	margin-top: 20px;
+	text-align: center;
 	height: 300px;
 }
+
+#about .hi{
+	color: #4B77BE;
+	margin-top: 20px;
+}
+
+#about p{
+	margin-top: -10px;
+}
+
+
 
 
 .center{
@@ -127,6 +138,28 @@ span{
 	margin-top: -60px;
 }
 
+#contactme{
+	text-align: center;
+	margin-top: 100px;
+}
+
+#contactme h2{
+	color: #4B77BE;
+	clear: both;
+
+}
+
+#contactme h3{
+	color: #4B77BE;
+	clear: both;
+	margin-top: -20px;
+}
+
+#contactme p{
+	color: #000000;
+	clear: both;
+}
+
 /*
  * HEADER STYLE
  */
@@ -166,10 +199,9 @@ span{
 }
 
 footer{
-
  	width: 100%;
  	height: 200px;
- 	margin-top: 210px;
+ 	margin-top: 50px;
  	background-color: #4B77BE;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -217,15 +249,15 @@ h3.emailtext{
 }
 
 p.copyright{
-	padding-top: 60px;
+	padding-top: 90px;
 	text-align: center;
 	color: #fff;
 	text-decoration: none;
-
 }
 
 #cr{
 color: inherit;
+text-decoration: underline;
 }
 
 

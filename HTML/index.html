@@ -5,59 +5,67 @@
 		<meta name = "viewport" content = "width = device-width, initial-scale=1">
 		<meta charset = "uft-8">
 		<link rel = "shortcut_icon" href = "../images/favicons/favicon.ico" >
-
-
-
-
 		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>		
     	<link rel="stylesheet" type = 'text/css' href = "../bootstrap-hc/css/bootstrap.css" >
-
     	<link rel="stylesheet" type = 'text/css' href = "../CSS/style.css" >
 	</head>
 
 <body>
 	<div id = "bootstrap-overrides">
-
-	<div class="header">
-		<div class = "center">
-			<div class = "nav-down">
-				<a href="index.html"><img class = "logo" src="../images/huskylogo.png"/></a>
-
-				<nav>
-					<a class = "navlinks" href="index.html">About</a>
-					<a class = "navlinks" href="portfolio.html">Work</a>
-					<a class = "navlinks" href="notes.html">Notes</a>
-				</nav>
+		<div class="header">
+			<div class = "center">
+				<div class = "nav-down">
+					<a href="index.html"><img class = "logo" src="../images/huskylogo.png"/></a>
+					<nav>
+						<a class = "navlinks" href="index.html">About</a>
+						<a class = "navlinks" href="portfolio.html">Work</a>
+						<a class = "navlinks" href="notes.html">Notes</a>
+					</nav>
+				</div>
 			</div>
 		</div>
 
-	</div>
-
-	<div class = "abovemain">
-		<span>
-					<h1 class = "title">I'm Hector</h1>
-		</span>			
-	</div>
-
-	<div class = "main">
-		<div id = "container">
-			<a id = box-link href="notes.html"></a>
-
+		<div class = "abovemain">
+			<span>
+				<h1 class = "title">I'M HECTOR</h1>
+			</span>			
 		</div>
-	</div>
-	
 
-	<div class = "about">
-	</div>
+		<div class = "main">
+			<div id = "container">
+				<a id = box-link href="notes.html"></a>
+			</div>
+		</div>
+		
 
-			<div class = "email">
-				<a href="mailto:hectorchen6@gmail.com" target="_top"><img src="../images/messageicon.jpg"></a>				
+		<section id = "about">
+			<header>
+				<img src="../images/smallicon.png">
+			</header>
+			<h2 class = "hi"> Hi. </h2>
+			<p> I'm a recent graduate from University of California, San Diego. <br>
+				I studied Computer Science and have a deep passion for software <br>
+				development ranging from Android/iOS to Web Development and <br>
+				recently Big Data. 
+			</p>
+
+		</section>
+
+		<section id = "contactme">
+			<header> 
+				<h2> I can help. </h2>
+				<h3> abc 123 </h3>
+			</header>
+			<p> if you have a project blah blah. </p>
+ 			
+ 			<div class = "email">
+					<a href="mailto:hectorchen6@gmail.com" target="_top"><img src="../images/messageicon.jpg" height= "50" width="188"></a>				
 			</div>
 
+		</section>
 	</div>
 
 	<footer>
-
 
 		<div id = "foot">
 
@@ -71,7 +79,7 @@
 
 
 
-			<p class = "copyright">© 2016 <a id = "cr" href="http://hectorchen.com">Hector Chen</a>. All rights reserved.</p>
+			<p class = "copyright">&copy; 2016 <a id = "cr" href="http://hectorchen.com">Hector Chen</a>. All rights reserved.</p>
 
 		</div>
 		
@@ -86,7 +94,7 @@
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('header').outerHeight();
+var navbarHeight = $('.header').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -108,7 +116,7 @@ function hasScrolled() {
     
     // If they scrolled down and are past the navbar, add class .nav-up.
     // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
+    if (st > lastScrollTop ){
         // Scroll Down
         $('.header').removeClass('nav-down').addClass('nav-up');
     } else {
