@@ -50,15 +50,43 @@
 
 		</section>
 
-		<section id = "summary">
+		<div id = "summary">
+			<h2 class = "summary-title"> WHAT I DO </h2>
+			<div class = "cfcaption">
 				<div id = "cf">
 						<img class = "iphonehexblue" src="../images/iphonehexblue.png" height = "235" width = "181">
 						<img class = "iphone" src="../images/iphonebadge.png" height = "235" width = "181">
-
 				</div>
-				<img class = "pencil shift" src="../images/pencilbadge.png" height = "235" width = "181" >
-				<img class = "website shift" src="../images/macbadge.png" height = "235" width = "181">
-<!--
+				<div class = "caption"> <h4> Mobile Development</h4> 
+										Creating innovative and fun mobile applications 
+										on both Android and iOS. 
+				</div>
+
+			</div>
+
+			<div class = "cf2caption">
+				<div id = "cf2">
+					<img class = "pencilhexblue pencil shift" src="../images/pencilhexblue.png" height = "235" width = "181" >
+					<img class = "pencil shift" src="../images/redpencilhex.png" height = "235" width = "181" >
+				</div>
+				<span class = "caption"> <h4> Design </h4> Sketching and planning the look, architecture, and usage of
+										an application. I enjoy visualizing then designing my visions to create a 
+										well rounded product. </span>
+
+			</div>
+
+			<div class = "cf3caption">
+				<div id = "cf3">
+					<img class = "machexblue shift" src="../images/bluemac.png" height = "235" width = "181">
+					<img class = "mac shift" src="../images/redmac.png" height = "235" width = "181">
+				</div>
+				<span class = "caption"> <h4> Web Development </h4> Building responsive websites using the latest technologies.
+																	HTML/CSS Development, User Interface Design </span>
+
+			</div>
+
+<!--			
+
 
 				<a id = box-link href="notes.html"></a>
 
@@ -66,14 +94,13 @@
 											  I HOPE THIS WORKS CUZ IT WOULD <br>
 											  BE SO TOTALLY AWESOME YAY!</p> 
 -->
-		</section>
-
+		</div>
 		<section id = "contactme">
 			<header> 
-				<h2> I can help. </h2>
-				<h3> abc 123 </h3>
+				<h2> Hire Me</h2>
+				<h4> I'm currently looking for full time <br>
+					Software/Web Development positions</h4>
 			</header>
-			<p> if you have a project blah blah. </p>
  			
  			<div class = "email">
 					<a href="mailto:hectorchen6@gmail.com" target="_top"><img src="../images/messageicon.jpg" height= "50" width="188"></a>				
@@ -92,8 +119,6 @@
 				<a href = "https://github.com/hpc001"> <img class = "sm" src="../images/socialmediabadge/github.png"></a>				
 
 			</div>
-
-
 
 
 			<p class = "copyright">&copy; 2016 <a id = "cr" href="http://hectorchen.com">Hector Chen</a>. All rights reserved.</p>
@@ -156,7 +181,6 @@ $(document).ready(function(){
       if(scroll_start > offset.top) {
       	    	//$('.header').css("background-image", "none");
 	          	$('.header').css('background-color', 'white');
-		         $('.header').css('transition', 'top 0.4s ease-in-out');
 
 	          	$('.navlinks').css('color', '#4B77BE');
 	          	//$('.header').fadeIn('slow');
@@ -167,7 +191,6 @@ $(document).ready(function(){
        } else {
        	  	$('.header').fadeIn('slow', function () {
 		         $('.header').css('background-color', '#4B77BE');
-		         $('.header').css('transition', 'background-color 0.5s ease, top 0.4s ease-in-out');
 
 		         //$('.header').css("background-image", "url(../images/101.jpg)");
 		         //$('.header').fadeIn('slow');
