@@ -4,7 +4,7 @@
 		<title> Hector Chen </title>
 		<meta name = "viewport" content = "width = device-width, initial-scale=1">
 		<meta charset = "uft-8">
-		<link rel = "shortcut_icon" href = "../images/favicons/favicon.ico" >
+		<link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png" />
 		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>		
     	<link rel="stylesheet" type = 'text/css' href = "../bootstrap-hc/css/bootstrap.css" >
     	<link rel="stylesheet" type = 'text/css' href = "../CSS/style.css" >
@@ -17,23 +17,23 @@
 				<div class = "nav-down">
 					<a href="index.html"><img class = "logo" src="../images/huskylogo.png"/></a>
 					<nav>
-						<a class = "navlinks" href="index.html">About</a>
-						<a class = "navlinks" href="portfolio.html">Work</a>
-						<a class = "navlinks" href="notes.html">Notes</a>
+						<a class = "navlinks indexnav" href="index.html">About</a>
+						<a class = "navlinks portnav" href="portfolio.html">Work</a>
+						<a class = "navlinks notesnav" href="notes.html">Notes</a>
 					</nav>
 				</div>
 			</div>
 		</div>
 
-		<div class = "abovemain">
+		<div id = "head">
 			<span>
 				<h1 class = "title">I'M HECTOR</h1>
 			</span>			
 		</div>
 
 		<div class = "main">
-			<div id = "container">
-			</div>
+
+
 		</div>
 		
 
@@ -50,12 +50,20 @@
 
 		</section>
 
+		<div id = "breaker">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
+		</div>
+
 		<div id = "summary">
 			<h2 class = "summary-title"> WHAT I DO </h2>
 			<div class = "cfcaption">
 				<div id = "cf">
-						<img class = "iphonehexblue" src="../images/iphonehexblue.png" height = "235" width = "181">
-						<img class = "iphone" src="../images/iphonebadge.png" height = "235" width = "181">
+						<a href="portfolio.html#saambaa"><img class = "iphonehexblue" src="../images/iphonehexblue.png" height = "235" width = "181"></a>
+						<a href="portfolio.html#saambaa"><img class = "iphone" src="../images/iphonebadge.png" height = "235" width = "181"></a>
 				</div>
 				<div class = "caption"> <h4> Mobile Development</h4> 
 										Creating innovative and fun mobile applications 
@@ -66,34 +74,30 @@
 
 			<div class = "cf2caption">
 				<div id = "cf2">
-					<img class = "pencilhexblue pencil shift" src="../images/pencilhexblue.png" height = "235" width = "181" >
-					<img class = "pencil shift" src="../images/redpencilhex.png" height = "235" width = "181" >
+					<a href="portfolio.html#etc"><img class = "pencilhexblue pencil shift" src="../images/pencilhexblue.png" height = "235" width = "181" ></a>
+					<a href="portfolio.html#etc"><img class = "pencil shift" src="../images/redpencilhex.png" height = "235" width = "181" ></a>
 				</div>
 				<span class = "caption"> <h4> Design </h4> Sketching and planning the look, architecture, and usage of
 										an application. I enjoy visualizing then designing my visions to create a 
 										well rounded product. </span>
-
 			</div>
 
 			<div class = "cf3caption">
 				<div id = "cf3">
-					<img class = "machexblue shift" src="../images/bluemac.png" height = "235" width = "181">
-					<img class = "mac shift" src="../images/redmac.png" height = "235" width = "181">
+					<a href="portfolio.html#emissary"><img class = "machexblue shift" src="../images/bluemac.png" height = "235" width = "181"></a>
+					<a href="portfolio.html#emissary"><img class = "mac shift" src="../images/redmac.png" height = "235" width = "181"></a>
 				</div>
 				<span class = "caption"> <h4> Web Development </h4> Building responsive websites using the latest technologies.
 																	HTML/CSS Development, User Interface Design </span>
-
 			</div>
+		</div>
 
-<!--			
-
-
-				<a id = box-link href="notes.html"></a>
-
-				<p class = "img-description"> THIS IS A TEST DESCRIPTION. <br>
-											  I HOPE THIS WORKS CUZ IT WOULD <br>
-											  BE SO TOTALLY AWESOME YAY!</p> 
--->
+		<div id = "breaker">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
+			<img src="../images/greydot.png">
 		</div>
 		<section id = "contactme">
 			<header> 
@@ -174,7 +178,7 @@ function hasScrolled() {
 //CHANGE NAVBAR COLOR
 $(document).ready(function(){       
    var scroll_start = 0;
-   var startchange = $('.abovemain');
+   var startchange = $('#head');
    var offset = startchange.offset();
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
@@ -206,6 +210,24 @@ $(document).ready(function(){
 });
 
 /////////
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+
+
+
 
 
 

@@ -17,83 +17,71 @@
 
 <body>
 	<div id = "bootstrap-overrides">
-
-	<div class="header">
-		<div class = "center">
-			<div class = "nav-down">
-				<a href="index.html"><img class = "logo" src="../images/huskylogo.png"/></a>
-
-				<nav>
-					<a class = "navlinks" href="index.html">About</a>
-					<a class = "navlinks" href="portfolio.html">Work</a>
-					<a class = "navlinks" href="notes.html">Notes</a>
-				</nav>
+		<div class="header">
+			<div class = "center">
+				<div class = "nav-down">
+					<a href="index.html"><img class = "logo" src="../images/huskylogo.png"/></a>
+					<nav>
+						<a class = "navlinks" href="index.html">About</a>
+						<a class = "navlinks" href="portfolio.html#saambaa">Work</a>
+						<a class = "navlinks" href="notes.html">Notes</a>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id = "head">
+		
+		<div id = "head">
 			<span>
 				<h1 class = "portfolio">Work</h1>
 			</span>
-	</div>
-
-	<div id="container">
-		<div class = "one">
-			<img class = "port" src="../images/copy.jpg">
-			<img class = "port pad" src="../images/copy.jpg">
-			<img class = "port pad" src="../images/copy.jpg">
 		</div>
 
-		<div class = "two">
-			<img class = "port" src="../images/taipeipic.jpg">
-			<img class = "port pad" src="../images/taipeipic.jpg">
-			<img class = "port pad" src="../images/taipeipic.jpg">
-			
+		<div id = "worksummary">
+			<header>
+
+			</header>
 		</div>
 
-		<div class = "three">
-			<img class = "port" src="../images/background.jpg">
-			<img class = "port pad" src="../images/background.jpg">
-			<img class = "port pad" src="../images/background.jpg">
-			
-		</div>
-	</div>
+		<div id="container">
+			<section id = "saambaa">
+				<img class = "port" src="../images/copy.jpg">
+			</section>
+			<div class = "apex"></div>
 
+			<section id = "emissary">
+				<img class = "port" src="../images/taipeipic.jpg">
+			</section>
+
+			<section id = "etc">
+				<img class = "port" src="../images/background.jpg">
+			</section>
+		</div>
 		<section id = "contactme">
 			<header> 
 				<h2> Hire Me</h2>
 				<h4> I'm currently looking for full time <br>
 					Software/Web Development positions</h4>
 			</header>
- 			
  			<div class = "email">
 					<a href="mailto:hectorchen6@gmail.com" target="_top"><img src="../images/messageicon.jpg" height= "50" width="188"></a>				
 			</div>
-
 		</section>
-		</div>
-
+		
+	</div>
 	<footer>
 
-
 		<div id = "foot">
-
 			<div class = "social">
 				<a href = "https://facebook.com/hector.chen"> <img class = "sm" src="../images/socialmediabadge/facebook.png"></a>				
 				<a href = "https://www.linkedin.com/in/hector-chen-bba446b5"> <img class = "sm" src="../images/socialmediabadge/linkedin.png"></a>
 				<a href = "https://github.com/hpc001"> <img class = "sm" src="../images/socialmediabadge/github.png"></a>				
-
 			</div>
 
-
-
-			<p class = "copyright">© 2016 <a id = "cr" href="http://hectorchen.com">Hector Chen</a>. All rights reserved.</p>
-
+			<p class = "copyright">&copy; 2016 <a id = "cr" href="http://hectorchen.com">Hector Chen</a>. All rights reserved.</p>
 		</div>
 		
-
 	</footer>
+	
 
 	<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -177,10 +165,25 @@ $(document).ready(function(){
    });
 });
 
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
-/////////
+
 
 </script>
+
 
 </body>
 </html>
